@@ -192,6 +192,7 @@ class ComputersController extends Controller
         $computer->nutzer = $request->input('nutzer');
         $computer->hersteller = $request->input('hersteller');
         $computer->model = $request->input('model');
+	$computer->kommentar = $request->input('kommentar');
         $computer->save();
 
         return redirect('/pc')->with('success', 'Eintrag in Rechnerliste aktualisiert');
@@ -259,7 +260,8 @@ class ComputersController extends Controller
          <td>'.$row->nachname.','.$row->vorname.'</td>
          <td>'.$row->hersteller.'</td>
          <td>'.$row->model.'</td>
-         <td>'.$row->macadresse.'</td>'.
+	 <td>'.$row->macadresse.'</td>
+         <td>'.$row->kommentar.'</td>'.
          '<td><small><a href="/pc/'.$row->pc_id.'/edit" class="btn btn-secondary">Edit</a></small></td>'.
        '</tr>';
          

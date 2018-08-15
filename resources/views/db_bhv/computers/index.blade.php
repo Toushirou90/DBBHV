@@ -66,6 +66,8 @@
         
     <th>Mac Adresse</th>
         
+    <th>Kommentar</th>
+
     <th>Edit</th>
         
     

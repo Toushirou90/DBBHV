@@ -89,6 +89,14 @@
                     {{Form::text('model', $computer->model, ['class' => 'form-control', 'placeholder' => 'Modell'])}}
                 </div>
             </div>
+  	   <div class="row">
+                <div class="col-sm-2">
+                    {{Form::label('kommentar', 'Kommentar')}}
+                </div>
+                <div class="col-sm-4">   
+                    {{Form::text('kommentar', $computer->kommentar, ['class' => 'form-control', 'placeholder' => 'Bsp.: IMAC'])}}
+                </div>
+            </div>
         </div>
     </div>
     <div class="container">
