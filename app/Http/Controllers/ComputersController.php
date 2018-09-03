@@ -107,6 +107,7 @@ class ComputersController extends Controller
         $computer->nutzer = $request->input('nutzer');
         $computer->hersteller = $request->input('hersteller');
         $computer->model = $request->input('model');
+	$computer->kommentar = $request->input('kommentar');
         $computer->save();
 
         return redirect('/pc')->with('success', 'Neuen Rechner eingetragen');
