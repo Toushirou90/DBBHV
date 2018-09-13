@@ -65,6 +65,8 @@
     <th>Modell</th>
         
     <th>Mac Adresse</th>
+
+    <th>Version</th>
         
     <th>Kommentar</th>
 

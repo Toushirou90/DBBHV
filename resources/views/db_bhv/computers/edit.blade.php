@@ -89,6 +89,14 @@
                     {{Form::text('model', $computer->model, ['class' => 'form-control', 'placeholder' => 'Modell'])}}
                 </div>
             </div>
+           <div class="row">
+                <div class="col-sm-2">
+                    {{Form::label('version', 'Version')}}
+                </div>
+                <div class="col-sm-4">
+                    {{Form::text('version', $computer->version, ['class' => 'form-control', 'placeholder' => 'Bsp.:7 / 10 - 1803'])}}
+                </div>
+            </div>
   	   <div class="row">
                 <div class="col-sm-2">
                     {{Form::label('kommentar', 'Kommentar')}}

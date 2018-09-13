@@ -37,14 +37,20 @@
             </div>
             <div class="col-sm-4"> 
                 {{Form::text('model', '', ['class' => 'form-control', 'placeholder' => 'Modell'])}}
-                <br>
             </div>
+            <div class="col-sm-4">
+                {{Form::text('version', '', ['class' => 'form-control', 'placeholder' => 'Windows Version'])}}
+            </div>
+            <div class="col-sm-4">
+                {{Form::text('kommentar', '', ['class' => 'form-control', 'placeholder' => 'Kommentar'])}}
+            </div>
+<br>
             <div class"container">
                 {{Form::submit('Daten absenden', ['class' => 'btn btn-primary'])}}
                 {!! Form::close() !!}
                 <a href="/pc" class="btn btn-secondary">zurück</a>
             </div>
-            
+
             </div>
         </div>
     

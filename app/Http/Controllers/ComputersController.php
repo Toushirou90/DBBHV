@@ -107,6 +107,7 @@ class ComputersController extends Controller
         $computer->nutzer = $request->input('nutzer');
         $computer->hersteller = $request->input('hersteller');
         $computer->model = $request->input('model');
+	$computer->version = $request->input('version');
 	$computer->kommentar = $request->input('kommentar');
         $computer->save();
 
@@ -193,6 +194,7 @@ class ComputersController extends Controller
         $computer->nutzer = $request->input('nutzer');
         $computer->hersteller = $request->input('hersteller');
         $computer->model = $request->input('model');
+	$computer->version = $request->input('version');
 	$computer->kommentar = $request->input('kommentar');
         $computer->save();
 
@@ -233,6 +235,8 @@ class ComputersController extends Controller
         ->orWhere('nutzers.vorname', 'like', '%'.$query.'%')
         ->orWhere('hersteller', 'like', '%'.$query.'%')
         ->orWhere('macadresse', 'like', '%'.$query.'%')
+        ->orWhere('version', 'like', '%'.$query.'%')
+	->orWhere('kommentar', 'like', '%'.$query.'%')
         ->orderBy('nachname', 'asc')
         ->get();  
                 
@@ -262,7 +266,8 @@ class ComputersController extends Controller
          <td>'.$row->hersteller.'</td>
          <td>'.$row->model.'</td>
 	 <td>'.$row->macadresse.'</td>
-         <td>'.$row->kommentar.'</td>'.
+	 <td>'.$row->version.'</td>
+	 <td>'.$row->kommentar.'</td>'.
          '<td><small><a href="/pc/'.$row->pc_id.'/edit" class="btn btn-secondary">Edit</a></small></td>'.
        '</tr>';
          
